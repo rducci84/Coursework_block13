@@ -7,6 +7,12 @@
  */
 function convertToCelsius(f) {
   // TODO
+  // Formula: C = (F - 32) * 5 / 9 
+  //Number.isNaN(f) ? 0 : (f - 32) * 5 / 9;
+  // Return the result of the conversion
+Celsius = ((f - 32) * 5 / 9)
+CelsiusR = Celsius.toFixed(2)
+return CelsiusR
 }
 
 /**
@@ -24,6 +30,22 @@ function convertToCelsius(f) {
  */
 function describeTemperature(f) {
   // TODO
+    if (f < 32) {
+      console.log(`Temperature is ${f} Fahrenheit, equivalent to ${CelsiusR} Celsius. This is is very cold`)
+      return "very cold"
+    } else if (f < 64) {
+      console.log(`Temperature is ${f} Fahrenheit, equivalent to ${CelsiusR} Celsius. This is is cold`)
+      return "cold" 
+    } else if (f < 86) {
+      console.log(`Temperature is ${f} Fahrenheit, equivalent to ${CelsiusR} Celsius. This is is warm`)
+      return "warm"
+    } else if (f < 100) {
+      console.log(`Temperature is ${f} Fahrenheit, equivalent to ${CelsiusR} Celsius. This is is hot`)
+      return "hot"
+    } else {
+      console.log(`Temperature is ${f} Fahrenheit, equivalent to ${CelsiusR} Celsius. This is is very hot`)
+      return "very hot"
+    }
 }
 
 /**
@@ -32,6 +54,8 @@ function describeTemperature(f) {
  */
 function getRandomInt(limit) {
   // TODO
+  rnd = Math.floor(Math.random() * limit) + 1
+  return rnd
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
